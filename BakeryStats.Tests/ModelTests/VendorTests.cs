@@ -54,5 +54,16 @@ namespace BakeryStatistics.Tests
       CollectionAssert.AreEqual(info, _instances);
     }
     
+    [TestMethod]
+    public void FindId_ShouldReturnTheCorrectObject_Int()
+    {
+      string amigo1 = "Jenna";
+      string amigo2 = "Joshua";
+      Vendor first = new Vendor(amigo1);
+      Vendor second = new Vendor(amigo2);
+      Vendor getThat = Vendor.FindId(2);
+
+      Assert.AreEqual(second, getThat);
+    }
   }
 }
