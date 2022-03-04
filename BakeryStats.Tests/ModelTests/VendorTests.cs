@@ -6,8 +6,13 @@ using BakeryStatistics.Models;
 namespace BakeryStatistics.Tests
 {
   [TestClass]
-  public class VendorTests
+  public class VendorTests : IDisposable
   {
+    public void Dispose()
+    {
+      Vendor.ClearAllCustomers();
+    }
+
     [TestMethod]
     public void Vendor_ShouldCreateInstanceOfObject_NewVendor()
     {
@@ -33,7 +38,7 @@ namespace BakeryStatistics.Tests
       Vendor pierre = new Vendor(newCustomer);
       int didItWork = pierre.Id;
 
-      Assert.AreEqual(30, didItWork);
+      Assert.AreEqual(1, didItWork);
     }
   }
 }
