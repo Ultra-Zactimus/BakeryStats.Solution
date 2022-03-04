@@ -4,9 +4,9 @@ using System.Collections.Generic;
 
 namespace BakeryStatistics.Controllers
 {
-  public class OrderControllers : Controller
+  public class OrdersControllers : Controller
   {
-    [HttpGet("/vendors/{vendorId}/orders/new")]
+    [HttpGet("/customers/{vendorId}/orders/new")]
     public ActionResult New(int vendorId)
     {
       Vendor vendor = Vendor.FindId(vendorId);
@@ -20,7 +20,7 @@ namespace BakeryStatistics.Controllers
       return View();
     }
 
-    [HttpGet("/vendors/{vendorsId}/orders/{orderId}")]
+    [HttpGet("/customers/{vendorId}/orders/{orderId}")]
     public ActionResult Show(int vendorId, int orderId)
     {
       Order order = Order.FindIt(orderId);
