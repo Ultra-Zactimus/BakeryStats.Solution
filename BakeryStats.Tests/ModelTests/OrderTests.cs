@@ -21,7 +21,7 @@ namespace BakeryStatistics.Tests
       string name = "John";
       Order order = new Order(name, "string", 0, 0);
       string newOrder = order.Customer;
-      Assert.AreEqual("jimbob", newOrder);
+      Assert.AreEqual(name, newOrder);
     }
   }
 }
