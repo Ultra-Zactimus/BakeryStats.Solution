@@ -17,6 +17,7 @@ namespace BakeryStatistics.Tests
     public void Order_ItShouldCreateInstanceOfObject_NewOrder()
     {
       Order order = new Order("blah", "blahblah", 0, 2022);
+
       Assert.AreEqual(typeof(Order), order.GetType());
     }
 
@@ -26,6 +27,7 @@ namespace BakeryStatistics.Tests
       string customer = "John";
       Order order = new Order(customer, "string", 0, 0);
       string newOrder = order.Name;
+
       Assert.AreEqual(customer, newOrder);
     }
 
@@ -35,6 +37,7 @@ namespace BakeryStatistics.Tests
       int price = 6;
       Order order = new Order("string", "string", price, 0);
       int objNum = order.Price;
+
       Assert.AreEqual(price, objNum);
     }
 
@@ -43,6 +46,7 @@ namespace BakeryStatistics.Tests
     {
       List<Order> order = new List<Order>{};
       List<Order> empty = Order.GetAllOrders();
+
       CollectionAssert.AreEqual(order, empty);
     }
 
@@ -55,6 +59,7 @@ namespace BakeryStatistics.Tests
       Order secondOrder = new Order("string", decription, 0, 0);
       List<Order> list = new List<Order> { firstOrder, secondOrder };
       List<Order> details = Order.GetAllOrders();
+      
       CollectionAssert.AreEqual(list, details);
     }
   }

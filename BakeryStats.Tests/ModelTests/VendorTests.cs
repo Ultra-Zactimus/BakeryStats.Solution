@@ -12,6 +12,7 @@ namespace BakeryStatistics.Tests
     public void Vendor_ShouldCreateInstanceOfObject_NewVendor()
     {
       Vendor pierre = new Vendor("string");
+
       Assert.AreEqual(typeof(Vendor), pierre.GetType());
     }
 
@@ -21,7 +22,18 @@ namespace BakeryStatistics.Tests
       string name = "Lily";
       Vendor pierre = new Vendor(name);
       string getInfo = pierre.Customer;
+
       Assert.AreEqual(name, getInfo);
+    }
+
+    [TestMethod]
+    public void GetThatID_ShouldBeAbleToGrabIdOfOrder_Int()
+    {
+      string newCustomer = "Michael";
+      Vendor pierre = new Vendor(newCustomer);
+      int didItWork = pierre.Id;
+
+      Assert.AreEqual(30, didItWork);
     }
   }
 }
