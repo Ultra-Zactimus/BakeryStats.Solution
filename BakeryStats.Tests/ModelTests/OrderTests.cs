@@ -23,10 +23,10 @@ namespace BakeryStatistics.Tests
     [TestMethod]
     public void Order_NewObjectShouldContainItsValues_String()
     {
-      string name = "John";
-      Order order = new Order(name, "string", 0, 0);
-      string newOrder = order.Customer;
-      Assert.AreEqual(name, newOrder);
+      string customer = "John";
+      Order order = new Order(customer, "string", 0, 0);
+      string newOrder = order.Name;
+      Assert.AreEqual(customer, newOrder);
     }
 
     [TestMethod]

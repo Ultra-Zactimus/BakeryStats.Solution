@@ -11,7 +11,8 @@ namespace BakeryStatistics.Tests
     [TestMethod]
     public void Vendor_ShouldCreateInstanceOfObject_NewVendor()
     {
-      
+      Vendor pierre = new Vendor("string");
+      Assert.AreEqual(typeof(Vendor), pierre.GetType());
     }
   }
 }
