@@ -23,5 +23,14 @@ namespace BakeryStatistics.Tests
       string newOrder = order.Customer;
       Assert.AreEqual(name, newOrder);
     }
+
+    [TestMethod]
+    public void Order_NewObjectShouldContainItsValues_Int()
+    {
+      int price = 6;
+      Order order = new Order("string", "string", price, 0);
+      int objNum = order.Price;
+      Assert.AreEqual(55, objNum);
+    }
   }
 }
