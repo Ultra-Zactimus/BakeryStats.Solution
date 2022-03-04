@@ -40,5 +40,19 @@ namespace BakeryStatistics.Tests
 
       Assert.AreEqual(1, didItWork);
     }
+
+    [TestMethod]
+    public void GetAllCustomers_ShouldReturnAllCustomersInList_VendorList()
+    {
+      string example1 = "Yetzirah";
+      string example2 = "Raziel";
+      Vendor container1 = new Vendor(example1);
+      Vendor containter2 = new Vendor(example2);
+      List<Vendor> _instances = new List<Vendor> { container1, containter2 };
+      List<Vendor> info = Vendor.GetAllCustomers();
+
+      CollectionAssert.AreEqual(info, _instances);
+    }
+    
   }
 }
