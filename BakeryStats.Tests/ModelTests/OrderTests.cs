@@ -70,7 +70,7 @@ namespace BakeryStatistics.Tests
       Order order = new Order("string", loafs, 0, 0);
       int checkId = order.Id;
 
-      Assert.AreEqual(4, checkId);
+      Assert.AreEqual(1, checkId);
     }
   }
 }
