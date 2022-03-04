@@ -72,5 +72,17 @@ namespace BakeryStatistics.Tests
 
       Assert.AreEqual(1, checkId);
     }
+
+    [TestMethod]
+    public void FindIt_ShouldDistinguishOrdersById_Int()
+    {
+      string name1 = "Cloud";
+      string name2 = "Tifa";
+      Order order1 = new Order(name1, "string", 0, 0);
+      Order order2 = new Order(name2, "string", 0, 0);
+      Order gitIt = Order.FindIt(2);
+
+      Assert.AreEqual(order2, gitIt);
+    }
   }
 }
