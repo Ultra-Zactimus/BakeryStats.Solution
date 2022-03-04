@@ -65,5 +65,19 @@ namespace BakeryStatistics.Tests
 
       Assert.AreEqual(second, getThat);
     }
+
+    [TestMethod]
+    public void AddOrders_VendorShouldBeAbleToPullFromOrderList_OrderList()
+    {
+      string orderDetails = "5 pastries";
+      Order order = new Order("string", orderDetails, 0, 0);
+      List<Order> ordersList = new List<Order>{ order };
+      string custName = "Josh Maoa";
+      Vendor pierre = new Vendor(custName);
+      pierre.AddOrders(order);
+      List<Order> list = pierre.Orders;
+
+      CollectionAssert.AreEqual(ordersList, list);
+    }
   }
 }
