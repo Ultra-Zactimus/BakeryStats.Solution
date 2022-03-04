@@ -12,7 +12,7 @@ namespace BakeryStatistics.Tests
     {
       Order.ClearAllOrders();
     }
-    
+
     [TestMethod]
     public void Order_ItShouldCreateInstanceOfObject_NewOrder()
     {
@@ -44,6 +44,18 @@ namespace BakeryStatistics.Tests
       List<Order> order = new List<Order>{};
       List<Order> empty = Order.GetAllOrders();
       CollectionAssert.AreEqual(order, empty);
+    }
+
+    [TestMethod]
+    public void GetAllOrders_ShouldReturnOrdersInList_OrderList()
+    {
+      string name = "Bob";
+      string decription = "2 loafs of bread";
+      Order firstOrder = new Order(name, "string", 0, 0);
+      Order secondOrder = new Order("string", decription, 0, 0);
+      List<Order> list = new List<Order> { firstOrder, secondOrder };
+      List<Order> details = Order.GetAllOrders();
+      CollectionAssert.AreEqual(list, details);
     }
   }
 }
