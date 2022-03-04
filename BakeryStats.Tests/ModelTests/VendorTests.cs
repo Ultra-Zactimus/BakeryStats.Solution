@@ -21,7 +21,7 @@ namespace BakeryStatistics.Tests
       string name = "Lily";
       Vendor pierre = new Vendor(name);
       string getInfo = pierre.Customer;
-      Assert.AreEqual("Evelyn", getInfo);
+      Assert.AreEqual(name, getInfo);
     }
   }
 }
