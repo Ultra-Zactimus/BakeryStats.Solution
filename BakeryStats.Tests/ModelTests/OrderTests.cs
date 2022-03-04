@@ -30,7 +30,7 @@ namespace BakeryStatistics.Tests
       int price = 6;
       Order order = new Order("string", "string", price, 0);
       int objNum = order.Price;
-      Assert.AreEqual(55, objNum);
+      Assert.AreEqual(price, objNum);
     }
   }
 }
