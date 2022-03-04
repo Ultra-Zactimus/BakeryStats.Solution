@@ -1,3 +1,21 @@
 @{
   Layout = "_Layout";
 }
+
+<h1>Add a new Customer</h1>
+<p>Pierre please enter your customer details below</p>
+<br>
+<form action="/customers" method="post">
+<label for="customerName">Customer's Name</label>
+<br>
+<input type="text" name="customerName" id="customerName">
+<br>
+<br>
+<button type="submit" class="btn btn-success">ADD</button>
+</form>
+<br>
+<br>
+<button type="button" href="/" class="btn btn-success">HOME</button>
+<br>
+<br>
+<button type="button" href="/customers" class="btn btn-success">CUSTOMER DATABASE</button>

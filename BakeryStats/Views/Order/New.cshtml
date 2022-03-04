@@ -1,3 +1,15 @@
 @{
   Layout = "_Layout";
 }
+
+<h1>Add new client to @Model.Name database</h1>
+<br>
+<form action="/customers/@Model.Id/items" method="post">
+<input type="hidden" value="@Model.Id" name="customerId" id="customerId">
+<br>
+<label for="orderDetails">Client Name</label>
+<br>
+<input type="text" name="orderDetails" id="orderDetails">
+<br>
+<button type="submit">ADD CLIENT</button>
+</form>
