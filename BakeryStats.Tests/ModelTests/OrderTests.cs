@@ -32,5 +32,13 @@ namespace BakeryStatistics.Tests
       int objNum = order.Price;
       Assert.AreEqual(price, objNum);
     }
+
+    [TestMethod]
+    public void GetAllOrders_ShouldReturnEmptyList_OrderList()
+    {
+      List<Order> order = new List<Order>{};
+      List<Order> empty = Order.GetAllOrders();
+      CollectionAssert.AreEqual(order, empty);
+    }
   }
 }
