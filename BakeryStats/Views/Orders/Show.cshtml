@@ -1,0 +1,16 @@
+@{
+  Layout = "_Layout";
+}
+
+<h1>Client Detials</h1>
+
+<h2>@Model["order"].OrderDetails</h2>
+<h3>Customer: @Model["customer"].Name</h3>
+
+<form action="/vendors/@Model["vendor"].Id/orders/new" method="get">
+  <button type="submit">Add Another Client</button>
+</form>
+<br>
+<form action="/vendors" method="get">
+  <button type="submit">View all Customers</button>
+</form>

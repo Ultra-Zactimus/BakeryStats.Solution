@@ -6,7 +6,7 @@ namespace BakeryStatistics.Controllers
 {
   public class OrdersControllers : Controller
   {
-    [HttpGet("/customers/{vendorId}/orders/new")]
+    [HttpGet("/vendors/{vendorId}/orders/new")]
     public ActionResult New(int vendorId)
     {
       Vendor vendor = Vendor.FindId(vendorId);
@@ -20,7 +20,7 @@ namespace BakeryStatistics.Controllers
       return View();
     }
 
-    [HttpGet("/customers/{vendorId}/orders/{orderId}")]
+    [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
     public ActionResult Show(int vendorId, int orderId)
     {
       Order order = Order.FindIt(orderId);

@@ -5,7 +5,7 @@
 <h1>Add a new Customer</h1>
 <p>Pierre please enter your customer details below</p>
 <br>
-<form action="/customers" method="post">
+<form action="/vendors" method="post">
 <label for="customerName">Customer's Name</label>
 <br>
 <input type="text" name="customerName" id="customerName">
@@ -15,7 +15,11 @@
 </form>
 <br>
 <br>
-<button type="button" href="/" class="btn btn-success">HOME</button>
+<form action="/" method="get">
+<button type="submit" class="btn btn-success">HOME</button>
+</form>
 <br>
 <br>
-<button type="button" href="/customers" class="btn btn-success">CUSTOMER DATABASE</button>
+<form action="/customers" method="get">
+<button type="submit" class="btn btn-success">CUSTOMER DATABASE</button>
+</form>
