@@ -62,5 +62,15 @@ namespace BakeryStatistics.Tests
       
       CollectionAssert.AreEqual(list, details);
     }
+
+    [TestMethod]
+    public void GetOrderID_ShouldGetIdOfOrder_Int()
+    {
+      string loafs = "5 loafs of bread";
+      Order order = new Order("string", loafs, 0, 0);
+      int checkId = order.Id;
+
+      Assert.AreEqual(4, checkId);
+    }
   }
 }
