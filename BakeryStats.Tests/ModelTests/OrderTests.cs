@@ -12,7 +12,7 @@ namespace BakeryStatistics.Tests
     public void Order_ItShouldCreateInstanceOfObject_NewOrder()
     {
       Order order = new Order("blah", "blahblah", 0, 0);
-      Assert.AreEqual(typeof(string), order.GetType());
+      Assert.AreEqual(typeof(Order), order.GetType());
     }
   }
 }
