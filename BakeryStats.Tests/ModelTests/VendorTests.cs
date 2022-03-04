@@ -14,5 +14,14 @@ namespace BakeryStatistics.Tests
       Vendor pierre = new Vendor("string");
       Assert.AreEqual(typeof(Vendor), pierre.GetType());
     }
+
+    [TestMethod]
+    public void Vendor_ShouldCreateInstanceWithValues_String()
+    {
+      string name = "Lily";
+      Vendor pierre = new Vendor(name);
+      string getInfo = pierre.Customer;
+      Assert.AreEqual("Evelyn", getInfo);
+    }
   }
 }
