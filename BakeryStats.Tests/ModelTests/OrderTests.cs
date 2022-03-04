@@ -6,8 +6,13 @@ using BakeryStatistics.Models;
 namespace BakeryStatistics.Tests
 {
   [TestClass]
-  public class OrderTests
+  public class OrderTests : IDisposable
   {
+    public void Dispose()
+    {
+      Order.ClearAllOrders();
+    }
+    
     [TestMethod]
     public void Order_ItShouldCreateInstanceOfObject_NewOrder()
     {
