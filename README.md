@@ -1,4 +1,4 @@
-# _Pierre's Bakery Statics: My Ninth Code Review at Epicodus_
+# _Pierre's Bakery Statistics: My Ninth Code Review at Epicodus_
 
 #### By Zachary Green
 

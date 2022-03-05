@@ -10,7 +10,7 @@ namespace BakeryStatistics.Tests
   {
     public void Dispose()
     {
-      Order.ClearAllOrders();
+      Order.ClearAll();
     }
 
     [TestMethod]
@@ -42,23 +42,23 @@ namespace BakeryStatistics.Tests
     }
 
     [TestMethod]
-    public void GetAllOrders_ShouldReturnEmptyList_OrderList()
+    public void GetAll_ShouldReturnEmptyList_OrderList()
     {
       List<Order> order = new List<Order>{};
-      List<Order> empty = Order.GetAllOrders();
+      List<Order> empty = Order.GetAll();
 
       CollectionAssert.AreEqual(order, empty);
     }
 
     [TestMethod]
-    public void GetAllOrders_ShouldReturnOrdersInList_OrderList()
+    public void GetAll_ShouldReturnOrdersInList_OrderList()
     {
       string name = "Bob";
       string decription = "2 loafs of bread";
       Order firstOrder = new Order(name, "string", 0, 0);
       Order secondOrder = new Order("string", decription, 0, 0);
       List<Order> list = new List<Order> { firstOrder, secondOrder };
-      List<Order> details = Order.GetAllOrders();
+      List<Order> details = Order.GetAll();
       
       CollectionAssert.AreEqual(list, details);
     }
@@ -74,13 +74,13 @@ namespace BakeryStatistics.Tests
     }
 
     [TestMethod]
-    public void FindIt_ShouldDistinguishOrdersById_Int()
+    public void Find_ShouldDistinguishOrdersById_Int()
     {
       string name1 = "Cloud";
       string name2 = "Tifa";
       Order order1 = new Order(name1, "string", 0, 0);
       Order order2 = new Order(name2, "string", 0, 0);
-      Order gitIt = Order.FindIt(2);
+      Order gitIt = Order.Find(2);
 
       Assert.AreEqual(order2, gitIt);
     }

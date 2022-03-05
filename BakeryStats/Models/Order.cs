@@ -21,18 +21,18 @@ namespace BakeryStatistics.Models
       _instances.Add(this);
       Id = _instances.Count;
     }
-    public static List<Order> GetAllOrders()
+    public static List<Order> GetAll()
     {
       return _instances;
     }
-    public static void ClearAllOrders()
+    public static void ClearAll()
     {
       _instances.Clear();
     }
 
-    public static Order FindIt(int custId)
+    public static Order Find(int searchId)
     {
-      return _instances[custId-1];
+      return _instances[searchId-1];
     }
   }
 }
