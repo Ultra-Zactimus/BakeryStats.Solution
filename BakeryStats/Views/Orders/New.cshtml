@@ -2,14 +2,26 @@
   Layout = "_Layout";
 }
 
-<h1>Add new client to @Model.Name database</h1>
+<h1>Add details to @Model.Name</h1>
 <br>
 <form action="/vendors/@Model.Id/orders" method="post">
 <input type="hidden" value="@Model.Id" name="vendorId" id="vendorId">
 <br>
-<label for="orderDetails">Client Name</label>
+<label for="name">Client Name:</label>
+<br>
+<input type="text" name="name" id="name">
+<br>
+<label for="orderDetails">Order Details:</label>
 <br>
 <input type="text" name="orderDetails" id="orderDetails">
 <br>
-<button type="submit">ADD CLIENT</button>
+<label for="price">Price:</label>
+<br>
+<input type="text" name="price" id="price">
+<br>
+<label for="date">Date of Purchase:</label>
+<br>
+<input type="text" name="date" id="date">
+<br>
+<button type="submit">ADD INFORMATION</button>
 </form>
