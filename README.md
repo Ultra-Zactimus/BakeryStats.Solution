@@ -33,7 +33,7 @@ _Pierre is running a sucessful bakery and his pastries and bread are flying off 
 
 ## Known Bugs
 
-* After adding a client name. They do not appear on the redirect page to view the client. Attempting to figure out what is broken in code.
+* After adding a Month name and clicking on month name, adding customer info button does not work. Attempting to figure out what is broken in code.
 
 ## License
 
