@@ -1,12 +1,12 @@
-# _README Template_
+# _Pierre's Bakery Statics: My Ninth Code Review at Epicodus_
 
 <p>
-  <img src="./" alt="Music Symbol Icon" width="150">
+  <img src="./MusicStats/wwwroot/img/bread.png" alt="Bread Icon" width="150">
 </p>
 
 #### By Zachary Green
 
-#### _Brief Discription_
+#### _This is a project that demonstrates using `ASP.Net Core MVC` to build out a project using Razor inline code in HTML and also seperation of classes, controllers for HTML Get and Post functionality and the use of Unit Testing with VSCode_
 
 ## Technologies Used
 
@@ -18,11 +18,11 @@
 
 ## Description
 
-_Deeper description_
+_Pierre is running a sucessful bakery and his pastries and bread are flying off the shelf. However, he needs a way to keep track of all his clients and how much each one is purchasing in a given day. This application is setup like how a website Database might function. The user can enter clients into the system and then click on their name to add extra details about that client to be stored and revisited later_
 
 ## Setup/Installation Requirements
 
-* Visit https://github.com/Ultra-Zactimus/
+* Visit https://github.com/Ultra-Zactimus/CodeReviewNine
 * Clone this repository to your desktop.
 * Navigate to the Home directory.
 * Open the `Index.cshtml` file in your browser.
