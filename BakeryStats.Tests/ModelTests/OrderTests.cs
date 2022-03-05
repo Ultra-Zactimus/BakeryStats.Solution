@@ -16,7 +16,7 @@ namespace BakeryStatistics.Tests
     [TestMethod]
     public void Order_ItShouldCreateInstanceOfObject_NewOrder()
     {
-      Order order = new Order("blah", "blahblah", 0, 2022);
+      Order order = new Order("blah", "blahblah", 6, 12, 2022);
 
       Assert.AreEqual(typeof(Order), order.GetType());
     }
@@ -25,7 +25,7 @@ namespace BakeryStatistics.Tests
     public void Order_NewObjectShouldContainItsValues_String()
     {
       string customer = "John";
-      Order order = new Order(customer, "string", 0, 0);
+      Order order = new Order(customer, "string", 0, 0, 0);
       string newOrder = order.Name;
 
       Assert.AreEqual(customer, newOrder);
@@ -35,7 +35,7 @@ namespace BakeryStatistics.Tests
     public void Order_NewObjectShouldContainItsValues_Int()
     {
       int price = 6;
-      Order order = new Order("string", "string", price, 0);
+      Order order = new Order("string", "string", price, 0, 0);
       int objNum = order.Price;
 
       Assert.AreEqual(price, objNum);
@@ -55,8 +55,8 @@ namespace BakeryStatistics.Tests
     {
       string name = "Bob";
       string decription = "2 loafs of bread";
-      Order firstOrder = new Order(name, "string", 0, 0);
-      Order secondOrder = new Order("string", decription, 0, 0);
+      Order firstOrder = new Order(name, "string", 0, 0, 0);
+      Order secondOrder = new Order("string", decription, 0, 0, 0);
       List<Order> list = new List<Order> { firstOrder, secondOrder };
       List<Order> details = Order.GetAll();
       
@@ -67,7 +67,7 @@ namespace BakeryStatistics.Tests
     public void GetOrderID_ShouldGetIdOfOrder_Int()
     {
       string loafs = "5 loafs of bread";
-      Order order = new Order("string", loafs, 0, 0);
+      Order order = new Order("string", loafs, 0, 0, 0);
       int checkId = order.Id;
 
       Assert.AreEqual(1, checkId);
@@ -78,8 +78,8 @@ namespace BakeryStatistics.Tests
     {
       string name1 = "Cloud";
       string name2 = "Tifa";
-      Order order1 = new Order(name1, "string", 0, 0);
-      Order order2 = new Order(name2, "string", 0, 0);
+      Order order1 = new Order(name1, "string", 0, 0, 0);
+      Order order2 = new Order(name2, "string", 0, 0, 0);
       Order gitIt = Order.Find(2);
 
       Assert.AreEqual(order2, gitIt);
