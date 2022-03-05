@@ -4,10 +4,14 @@
 
 <h1>Client Detials</h1>
 
-<h2>@Model["order"].OrderDetails</h2>
-<h3>Customer: @Model["vendor"].Name</h3>
+<h2>Name: @Model["order"].Name</h2>
+<h2>Order Details: @Model["order"].OrderDetails</h2>
+<h2>Order Price: @Model["order"].Price</h2>
+<h2>Day of Purchase: @Model["order"].Day</h2>
+<h2>Year of Purchase: @Model["order"].Year</h2>
+<h3>Month of Purchase: @Model["vendor"].Month</h3>
 
-<form action="/vendors/@Model["vendor"].Id/orders/new" method="get">
+<form action='/vendors/@Model["vendor"].Id/orders/new' method="get">
   <button type="submit">Add Another Client</button>
 </form>
 <br>

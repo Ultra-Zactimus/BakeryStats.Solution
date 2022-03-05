@@ -13,7 +13,7 @@ namespace BakeryStatistics.Controllers
       return View(allVendors);
     }
 
-    [HttpGet("/vendors/new")]
+    [HttpGet("vendors/new")]
     public ActionResult New()
     {
       return View();
@@ -42,8 +42,8 @@ namespace BakeryStatistics.Controllers
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
       Vendor foundVendor = Vendor.Find(vendorId);
-      Order newClient = new Order(name, orderDetails, price, day, year);
-      foundVendor.AddOrder(newClient);
+      Order newOrder = new Order(name, orderDetails, price, day, year);
+      foundVendor.AddOrder(newOrder);
       List<Order> vendorOrders = foundVendor.Orders;
       model.Add("orders", vendorOrders);
       model.Add("vendor", foundVendor);

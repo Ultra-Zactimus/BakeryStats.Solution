@@ -14,7 +14,7 @@ namespace BakeryStatistics.Controllers
     }
 
     [HttpPost("/orders/delete")]
-    public ActionResult Delete()
+    public ActionResult DeleteAll()
     {
       Order.ClearAll();
       return View();

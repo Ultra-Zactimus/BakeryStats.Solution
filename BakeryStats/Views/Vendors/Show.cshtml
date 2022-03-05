@@ -9,16 +9,16 @@
 <ol>
   @foreach (Order order in @Model["orders"])
   {
-    <li><a href="/vendors/@Model["vendor"].Id/orders/@order.Id">Name: (@order.Name) Order Details: (@order.OrderDetails) Price: (@order.Price) Day of Month: (@order.Day) Year: (@order.Year)</a></li>
+    <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>Name: (@order.Name) Order Details: (@order.OrderDetails) Price: (@order.Price) Day of Month: (@order.Day) Year: (@order.Year)</a></li>
   }
 </ol>
 <br>
-<form action="/vendors/@Model["vendor"].Id/orders/new" method="get">
+<form action='/vendors/@Model["vendor"].Id/orders/new' method="get">
 <button type="submit" class="btn btn-success">ADD NEW DETAILS</button>
 </form>
 <br>
 <br>
-<form action="/vendors/" method="get">
+<form action='/vendors' method="get">
 <button type="submit" class="btn btn-success">DATABASE</button>
 </form>
 <br>
