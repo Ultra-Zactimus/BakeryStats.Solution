@@ -2,7 +2,7 @@
 
 #### By Zachary Green
 
-#### _This is a project that demonstrates using `ASP.Net Core MVC` to build out a project using Razor inline code in HTML and also seperation of classes, controllers for HTML Get and Post functionality and the use of Unit Testing with VSCode_
+#### _This is a project that demonstrates using `ASP.Net Core MVC` to build out a project using Razor inline code in HTML and also seperation of classes, controllers for HTML Get and Post functionality and the use of Unit Testing with VSCode. This project was possible under the guidance of Epicodus https://www.epicodus.com/_
 
 ## Technologies Used
 
@@ -18,7 +18,7 @@ _Pierre is running a sucessful bakery and his pastries and bread are flying off 
 
 ## Setup/Installation Requirements
 
-* Visit https://github.com/Ultra-Zactimus/CodeReviewNine
+* Visit https://github.com/Ultra-Zactimus/BakeryStats.Solution
 * Clone this repository to your desktop.
 * Navigate to the Home directory.
 * Open the `Index.cshtml` file in your browser.
