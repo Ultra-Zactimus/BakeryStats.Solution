@@ -9,7 +9,7 @@ namespace BakeryStatistics.Controllers
     [HttpGet("/vendors")]
     public ActionResult Index()
     {
-      List<Vendor> allVendors = Vendor.GetAllCustomers();
+      List<Vendor> allVendors = Vendor.GetAll();
       return View(allVendors);
     }
 
@@ -30,7 +30,7 @@ namespace BakeryStatistics.Controllers
     public ActionResult Show(int id)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
-      Vendor selectedVendor = Vendor.FindId(id);
+      Vendor selectedVendor = Vendor.Find(id);
       List<Order> vendorOrders = selectedVendor.Orders;
       model.Add("vendor", selectedVendor);
       model.Add("orders", vendorOrders);
@@ -38,12 +38,12 @@ namespace BakeryStatistics.Controllers
     }
 
     [HttpPost("/vendors/{vendorId}/orders")]
-    public ActionResult Create(int vendorId, string name, string orderDetails, int price, int date)
+    public ActionResult Create(int vendorId, string name, string orderDetails, int price, int day, int year)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
-      Vendor foundVendor = Vendor.FindId(vendorId);
-      Order newClient = new Order(name, orderDetails, price, date);
-      foundVendor.AddOrders(newClient);
+      Vendor foundVendor = Vendor.Find(vendorId);
+      Order newClient = new Order(name, orderDetails, price, day, year);
+      foundVendor.AddOrder(newClient);
       List<Order> vendorOrders = foundVendor.Orders;
       model.Add("orders", vendorOrders);
       model.Add("vendor", foundVendor);

@@ -5,13 +5,13 @@ namespace BakeryStatistics.Models
   public class Vendor
   {
     private static List<Vendor> _instances = new List<Vendor> {};
-    public string Customer { get; set; }
+    public string Month { get; set; }
     public int Id { get; }
     public List<Order> Orders { get; set; }
 
-    public Vendor(string customerName)
+    public Vendor(string month)
     {
-      Customer = customerName;
+      Month = month;
       _instances.Add(this);
       Id = _instances.Count;
       Orders = new List<Order>{};

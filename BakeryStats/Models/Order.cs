@@ -8,16 +8,18 @@ namespace BakeryStatistics.Models
     public string Name { get; set; }
     public string OrderDetails { get; set; }
     public int Price { get; set; }
-    public int Date { get; set; }
+    public int Day { get; set; }
+    public int Year { get; set; }
     public int Id { get; }
     private static List<Order> _instances = new List<Order>{};
 
-    public Order(string name, string orderDetails, int price, int date)
+    public Order(string name, string orderDetails, int price, int day, int year)
     {
       Name = name;
       OrderDetails = orderDetails;
       Price = price;
-      Date = date;
+      Day = day;
+      Year = year;
       _instances.Add(this);
       Id = _instances.Count;
     }

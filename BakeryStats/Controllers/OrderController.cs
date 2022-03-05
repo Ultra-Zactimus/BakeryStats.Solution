@@ -9,22 +9,22 @@ namespace BakeryStatistics.Controllers
     [HttpGet("/vendors/{vendorId}/orders/new")]
     public ActionResult New(int vendorId)
     {
-      Vendor vendor = Vendor.FindId(vendorId);
+      Vendor vendor = Vendor.Find(vendorId);
       return View(vendor);
     }
 
     [HttpPost("/orders/delete")]
     public ActionResult Delete()
     {
-      Order.ClearAllOrders();
+      Order.ClearAll();
       return View();
     }
 
     [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
     public ActionResult Show(int vendorId, int orderId)
     {
-      Order order = Order.FindIt(orderId);
-      Vendor vendor = Vendor.FindId(vendorId);
+      Order order = Order.Find(orderId);
+      Vendor vendor = Vendor.Find(vendorId);
       Dictionary<string, object> model = new Dictionary<string, object>();
       model.Add("order", order);
       model.Add("vendor", vendor);
