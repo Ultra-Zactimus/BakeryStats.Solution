@@ -1,9 +1,5 @@
 # _Pierre's Bakery Statics: My Ninth Code Review at Epicodus_
 
-<p>
-  <img src="./MusicStats/wwwroot/img/bread.png" alt="Bread Icon" width="150">
-</p>
-
 #### By Zachary Green
 
 #### _This is a project that demonstrates using `ASP.Net Core MVC` to build out a project using Razor inline code in HTML and also seperation of classes, controllers for HTML Get and Post functionality and the use of Unit Testing with VSCode_
@@ -37,7 +33,7 @@ _Pierre is running a sucessful bakery and his pastries and bread are flying off 
 
 ## Known Bugs
 
-* No known bugs at this time.
+* After adding a client name. They do not appear on the redirect page to view the client. Attempting to figure out what is broken in code.
 
 ## License
 
