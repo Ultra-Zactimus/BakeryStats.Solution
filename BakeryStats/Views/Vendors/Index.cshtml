@@ -4,16 +4,16 @@
 
 @using BakeryStatistics.Models;
 
-<h1>Months of Operation</h1>
+<h1>CLIENTEL</h1>
 
 @if (@Model.Count == 0)
 {
-  <h3>There are no dates in your Database!</h3>
+  <h3>There are no Clients in your Database yet!</h3>
 } 
 
 @foreach (Vendor vendor in Model)
 {
-  <h3><a href='/vendors/@vendor.Id'>@vendor.Month</a></h3>
+  <h3><a href='/vendors/@vendor.Id'>@vendor.Name</a></h3>
 }
 
 <p><a href='/'>HOME</a></p>

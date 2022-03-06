@@ -5,19 +5,19 @@ namespace BakeryStatistics.Models
 {
   public class Order
   {
-    public string Name { get; set; }
     public string OrderDetails { get; set; }
     public int Price { get; set; }
+    public int Month { get; set; }
     public int Day { get; set; }
     public int Year { get; set; }
     public int Id { get; }
     private static List<Order> _instances = new List<Order>{};
 
-    public Order(string name, string orderDetails, int price, int day, int year)
+    public Order(string orderDetails, int price, int month, int day, int year)
     {
-      Name = name;
       OrderDetails = orderDetails;
       Price = price;
+      Month = month;
       Day = day;
       Year = year;
       _instances.Add(this);

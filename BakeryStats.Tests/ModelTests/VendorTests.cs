@@ -16,27 +16,27 @@ namespace BakeryStatistics.Tests
     [TestMethod]
     public void Vendor_ShouldCreateInstanceOfObject_NewVendor()
     {
-      Vendor month = new Vendor("January");
+      Vendor name = new Vendor("John");
 
-      Assert.AreEqual(typeof(Vendor), month.GetType());
+      Assert.AreEqual(typeof(Vendor), name.GetType());
     }
 
     [TestMethod]
     public void Vendor_ShouldCreateInstanceWithValues_String()
     {
-      string month = "Febuary";
-      Vendor vendor = new Vendor(month);
-      string getInfo = vendor.Month;
+      string name = "April";
+      Vendor vendor = new Vendor(name);
+      string getInfo = vendor.Name;
 
-      Assert.AreEqual(month, getInfo);
+      Assert.AreEqual(name, getInfo);
     }
 
     [TestMethod]
     public void GetThatID_ShouldBeAbleToGrabIdOfOrder_Int()
     {
-      string newMonth = "March";
-      Vendor pierre = new Vendor(newMonth);
-      int didItWork = pierre.Id;
+      string newName = "Michael";
+      Vendor vendor = new Vendor(newName);
+      int didItWork = vendor.Id;
 
       Assert.AreEqual(1, didItWork);
     }
@@ -44,8 +44,8 @@ namespace BakeryStatistics.Tests
     [TestMethod]
     public void GetAll_ShouldReturnAllCustomersInList_VendorList()
     {
-      string example1 = "April";
-      string example2 = "May";
+      string example1 = "Cloud";
+      string example2 = "Tifa";
       Vendor container1 = new Vendor(example1);
       Vendor containter2 = new Vendor(example2);
       List<Vendor> _instances = new List<Vendor> { container1, containter2 };
@@ -57,10 +57,10 @@ namespace BakeryStatistics.Tests
     [TestMethod]
     public void Find_ShouldReturnTheCorrectObject_Int()
     {
-      string winter = "December";
-      string fall = "September";
-      Vendor first = new Vendor(winter);
-      Vendor second = new Vendor(fall);
+      string name1 = "Billy";
+      string name2 = "Fatima";
+      Vendor first = new Vendor(name1);
+      Vendor second = new Vendor(name2);
       Vendor getThat = Vendor.Find(2);
 
       Assert.AreEqual(second, getThat);
@@ -70,10 +70,10 @@ namespace BakeryStatistics.Tests
     public void AddOrder_VendorShouldBeAbleToPullFromOrderList_OrderList()
     {
       string orderDetails = "5 pastries";
-      Order order = new Order("string", orderDetails, 0, 0, 0);
+      Order order = new Order(orderDetails, 0, 0, 0, 0);
       List<Order> ordersList = new List<Order>{ order };
-      string month = "July";
-      Vendor vendor = new Vendor(month);
+      string name = "Claire";
+      Vendor vendor = new Vendor(name);
       vendor.AddOrder(order);
       List<Order> list = vendor.Orders;
 

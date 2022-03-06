@@ -16,7 +16,7 @@ namespace BakeryStatistics.Tests
     [TestMethod]
     public void Order_ItShouldCreateInstanceOfObject_NewOrder()
     {
-      Order order = new Order("blah", "blahblah", 6, 12, 2022);
+      Order order = new Order("details", 44, 03, 6, 2022);
 
       Assert.AreEqual(typeof(Order), order.GetType());
     }
@@ -24,18 +24,18 @@ namespace BakeryStatistics.Tests
     [TestMethod]
     public void Order_NewObjectShouldContainItsValues_String()
     {
-      string customer = "John";
-      Order order = new Order(customer, "string", 0, 0, 0);
-      string newOrder = order.Name;
+      string details = "5 pastries";
+      Order order = new Order(details, 0, 0, 0, 0);
+      string newOrder = order.OrderDetails;
 
-      Assert.AreEqual(customer, newOrder);
+      Assert.AreEqual(details, newOrder);
     }
 
     [TestMethod]
     public void Order_NewObjectShouldContainItsValues_Int()
     {
       int price = 6;
-      Order order = new Order("string", "string", price, 0, 0);
+      Order order = new Order("7 loafs", price, 0, 0, 0);
       int objNum = order.Price;
 
       Assert.AreEqual(price, objNum);
@@ -53,10 +53,10 @@ namespace BakeryStatistics.Tests
     [TestMethod]
     public void GetAll_ShouldReturnOrdersInList_OrderList()
     {
-      string name = "Bob";
-      string decription = "2 loafs of bread";
-      Order firstOrder = new Order(name, "string", 0, 0, 0);
-      Order secondOrder = new Order("string", decription, 0, 0, 0);
+      string description1 = "2 pastries";
+      string decription2 = "2 loafs of bread";
+      Order firstOrder = new Order(description1, 0, 0, 0, 0);
+      Order secondOrder = new Order(decription2, 0, 0, 0, 0);
       List<Order> list = new List<Order> { firstOrder, secondOrder };
       List<Order> details = Order.GetAll();
       
@@ -67,7 +67,7 @@ namespace BakeryStatistics.Tests
     public void GetOrderID_ShouldGetIdOfOrder_Int()
     {
       string loafs = "5 loafs of bread";
-      Order order = new Order("string", loafs, 0, 0, 0);
+      Order order = new Order(loafs, 0, 0, 0, 0);
       int checkId = order.Id;
 
       Assert.AreEqual(1, checkId);
@@ -76,10 +76,10 @@ namespace BakeryStatistics.Tests
     [TestMethod]
     public void Find_ShouldDistinguishOrdersById_Int()
     {
-      string name1 = "Cloud";
-      string name2 = "Tifa";
-      Order order1 = new Order(name1, "string", 0, 0, 0);
-      Order order2 = new Order(name2, "string", 0, 0, 0);
+      string description1 = "20 pastries";
+      string description2 = "1 pastry";
+      Order order1 = new Order(description1, 0, 0, 0, 0);
+      Order order2 = new Order(description2, 0, 0, 0, 0);
       Order gitIt = Order.Find(2);
 
       Assert.AreEqual(order2, gitIt);
