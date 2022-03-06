@@ -53,7 +53,7 @@ namespace BakeryStatistics.Tests
 
       CollectionAssert.AreEqual(info, _instances);
     }
-    
+
     [TestMethod]
     public void Find_ShouldReturnTheCorrectObject_Int()
     {
@@ -71,7 +71,7 @@ namespace BakeryStatistics.Tests
     {
       string orderDetails = "5 pastries";
       Order order = new Order(orderDetails, 0, 0, 0, 0);
-      List<Order> ordersList = new List<Order>{ order };
+      List<Order> ordersList = new List<Order> { order };
       string name = "Claire";
       Vendor vendor = new Vendor(name);
       vendor.AddOrder(order);

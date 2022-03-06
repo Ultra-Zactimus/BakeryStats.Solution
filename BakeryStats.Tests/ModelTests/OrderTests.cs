@@ -44,7 +44,7 @@ namespace BakeryStatistics.Tests
     [TestMethod]
     public void GetAll_ShouldReturnEmptyList_OrderList()
     {
-      List<Order> order = new List<Order>{};
+      List<Order> order = new List<Order> { };
       List<Order> empty = Order.GetAll();
 
       CollectionAssert.AreEqual(order, empty);
@@ -59,7 +59,7 @@ namespace BakeryStatistics.Tests
       Order secondOrder = new Order(decription2, 0, 0, 0, 0);
       List<Order> list = new List<Order> { firstOrder, secondOrder };
       List<Order> details = Order.GetAll();
-      
+
       CollectionAssert.AreEqual(list, details);
     }
 
