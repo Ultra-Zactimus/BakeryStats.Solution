@@ -3,30 +3,18 @@
 }
 
 <h1>Add details to @Model.Name</h1>
-<br>
+
 <form action="/vendors/@Model.Id/orders/" method="post">
-<input type="hidden" value="@Model.Id" name="vendorId" id="vendorId">
-<br>
-<label for="name">Client Name:</label>
-<br>
-<input type="text" name="name" id="name">
-<br>
-<label for="orderDetails">Order Details:</label>
-<br>
-<input type="text" name="orderDetails" id="orderDetails">
-<br>
-<label for="price">Price:</label>
-<br>
-<input type="text" name="price" id="price">
-<br>
-<label for="day">Day of Purchase:</label>
-<br>
-<input type="text" name="day" id="day">
-<br>
-<label for="year">Year of Purchase:</label>
-<br>
-<input type="text" name="year" id="year">
-<br>
-<br>
-<button type="submit">ADD INFORMATION</button>
+  <input type="hidden" value="@Model.Id" name="vendorId" id="vendorId">
+  <label for="name">Client Name:</label>
+  <input type="text" name="name" id="name">
+  <label for="orderDetails">Order Details:</label>
+  <input type="text" name="orderDetails" id="orderDetails">
+  <label for="price">Price:</label>
+  <input type="text" name="price" id="price">
+  <label for="day">Day of Purchase:</label>
+  <input type="text" name="day" id="day">
+  <label for="year">Year of Purchase:</label>
+  <input type="text" name="year" id="year">
+  <button type="submit">ADD INFORMATION</button>
 </form>

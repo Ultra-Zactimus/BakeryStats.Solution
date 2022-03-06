@@ -11,10 +11,5 @@
 <h2>Year of Purchase: @Model["order"].Year</h2>
 <h3>Month of Purchase: @Model["vendor"].Month</h3>
 
-<form action='/vendors/@Model["vendor"].Id/orders/new' method="get">
-  <button type="submit">Add Another Client</button>
-</form>
-<br>
-<form action="/vendors" method="get">
-  <button type="submit">View Months</button>
-</form>
+<a href='/vendors/@Model["vendor"].Id/orders/new'>Add Another Client</a>
+<a href='/vendors'>View Months</a>

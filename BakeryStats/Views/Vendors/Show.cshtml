@@ -5,24 +5,14 @@
 @using BakeryStatistics.Models;
 
 <h3>Client Order Details:</h3>
-<br>
+
 <ol>
   @foreach (Order order in @Model["orders"])
   {
     <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>Name: (@order.Name) Order Details: (@order.OrderDetails) Price: (@order.Price) Day of Month: (@order.Day) Year: (@order.Year)</a></li>
   }
 </ol>
-<br>
-<form action='/vendors/@Model["vendor"].Id/orders/new' method="get">
-<button type="submit" class="btn btn-success">ADD NEW DETAILS</button>
-</form>
-<br>
-<br>
-<form action='/vendors' method="get">
-<button type="submit" class="btn btn-success">DATABASE</button>
-</form>
-<br>
-<br>
-<form action="/" method="get">
-<button type="submit" class="btn btn-success">HOME</button>
-</form>
+
+<p><a href='/vendors/@Model["vendor"].Id/orders/new'>ADD NEW DETAILS</a></p>
+<p><a href='/vendors' method="get">DATABASE</a></p>
+<p><a href="/">HOME</a></p>
