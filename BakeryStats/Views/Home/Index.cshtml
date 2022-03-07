@@ -3,7 +3,15 @@
 }
 
 <h1>HOME</h1>
-<p>WELCOME PIERRE</p>
-<p>WHAT WOULD YOU LIKE TO DO TODAY?</p>
-<p><a href="/vendors">Clients</a></p>
-<p><a href="/vendors/new">Add a Client</a></p>
+<br>
+<p><strong>Welcome Back Pierre</strong></p>
+<br>
+<p><em>What would you like to do today?</em></p>
+<br>
+<form action="/vendors" method="get">
+  <button type="submit" class="btn btn-success">List of Clients</button>
+</form>
+<br>
+<form action="/vendors/new" method="get">
+  <button type="submit" class="btn btn-success">Add a Client</button>
+</form>

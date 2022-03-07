@@ -3,13 +3,34 @@
 }
 
 <h1>Client Details</h1>
-
-<h3>Client Name: @Model["vendor"].Name</h3>
-<h2>Order Details: @Model["order"].OrderDetails</h2>
-<h2>Order Price: @Model["order"].Price</h2>
-<h2>Month of Purchase: @Model["order"].Month</h2>
-<h2>Day of Purchase: @Model["order"].Day</h2>
-<h2>Year of Purchase: @Model["order"].Year</h2>
-
-<a href='/vendors/@Model["vendor"].Id/orders/new'>Add Another Client</a>
-<a href='/vendors'>View Clients</a>
+<br>
+<h4>Client Name:</h4>
+<p>@Model["vendor"].Name</p>
+<br>
+<h4>Order Details:</h4> 
+<p>@Model["order"].OrderDetails</p>
+<br>
+<h4>Order Price:</h4>
+<p>@Model["order"].Price</p>
+<br>
+<h4>Month of Purchase:</h4>
+<p>@Model["order"].Month</p>
+<br>
+<h4>Day of Purchase:</h4> 
+<p>@Model["order"].Day</p>
+<br>
+<h4>Year of Purchase:</h4> 
+<p>@Model["order"].Year</p>
+<br>
+<br>
+<form action='/vendors/@Model["vendor"].Id/orders/new' method="get">
+  <button type="submit" class="btn btn-success">Add Another Order</button>
+</form>
+<br>
+<form action="/vendors" method="get">
+  <button type="submit" class="btn btn-success">List of Clients</button>
+</form>
+<br>
+<form action="/" method="get">
+  <button type="submit" class="btn btn-success">HOME</button>
+</form>
