@@ -36,7 +36,7 @@ _Pierre is running a sucessful bakery and his pastries and bread are flying off 
 * Run "$ `dotnet restore`" to rebuild the necessary `NuGet` dependancies for `MSTest`.
 * Then Run "$ `dotnet test`", this will show how many tests and whether they passed or failed. By default the tests should be all in passing. If you would like to try out what a failure looks like, open either `OrderTests.cs` or `VendorTests.cs` in `VS Code`.
 * Pick any test to make change to that you would like with the `[TestMethod]` above it. Inside the `Assert.AreEqual()`, change the first value to something else.
-* Now run "$ `dotnet test". The message should appear in Red and tell you that it `Expected:` the value you have enter, but the `Actual:` value is not the same.
+* Now run "$ `dotnet test`". The message should appear in Red and tell you that it `Expected:` the value you have enter, but the `Actual:` value is not the same.
 * Please make suer to change any changes made back to what they were before trying to build the project again to avoid errors.
 
 --Developer Note--<em>You do not need to type in $ into the terminal, the terminal starts with $ on GitBash and % on Bash.</em>
