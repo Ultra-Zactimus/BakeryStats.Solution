@@ -6,30 +6,21 @@
 
 <form action="/vendors/@Model.Id/orders/" method="post">
   <input type="hidden" value="@Model.Id" name="vendorId" id="vendorId">
+
   <label for="orderDetails">Order Details:</label>
-  <br>
   <input type="text" name="orderDetails" id="orderDetails">
-  <br>
-  <br>
+
   <label for="price">Price:</label>
-  <br>
   <input type="text" name="price" id="price">
-  <br>
-  <br>
+
   <label for="month">Day of Purchase:</label>
-  <br>
   <input type="text" name="month" id="month">
-  <br>
-  <br>
+
   <label for="day">Day of Purchase:</label>
-  <br>
   <input type="text" name="day" id="day">
-  <br>
-  <br>
+
   <label for="year">Year of Purchase:</label>
-  <br>
   <input type="text" name="year" id="year">
-  <br>
-  <br>
+
   <button type="submit" class="btn btn-success">ADD INFORMATION</button>
 </form>
