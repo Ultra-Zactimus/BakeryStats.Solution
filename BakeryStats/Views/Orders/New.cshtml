@@ -11,16 +11,10 @@
   <input type="text" name="orderDetails" id="orderDetails" required>
 <br>
   <label for="price">Price of Purchase:</label>
-  <input type="text" name="price" id="price" step="number" required>
+  <input type="number" min="1" name="price" id="price" required>
 <br>
-  <label for="month">Month of Purchase:</label>
-  <input type="text" name="month" id="month" step="number" required>
-<br>
-  <label for="day">Day of Purchase:</label>
-  <input type="text" name="day" id="day" step="number" required>
-<br>
-  <label for="year">Year of Purchase:</label>
-  <input type="text" name="year" id="year" step="number" required>
-<br>
+  <label for="date">Date of Purchase:</label>
+  <input type="date" name="date" id="date" required>
+
   <button type="submit" class="btn btn-success" id="btn1">ADD INFORMATION</button>
 </form>

@@ -69,8 +69,9 @@ namespace BakeryStatistics.Tests
     [TestMethod]
     public void AddOrder_VendorShouldBeAbleToPullFromOrderList_OrderList()
     {
+      DateTime date = new DateTime(1986,03,10);
       string orderDetails = "5 pastries";
-      Order order = new Order(orderDetails, 0, 0, 0, 0);
+      Order order = new Order(orderDetails, 0, date);
       List<Order> ordersList = new List<Order> { order };
       string name = "Claire";
       Vendor vendor = new Vendor(name);

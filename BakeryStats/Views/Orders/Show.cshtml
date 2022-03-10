@@ -14,7 +14,7 @@
 <p>$@Model["order"].Price</p>
 
 <h4>Date of Purchase:</h4>
-<p>Month: @Model["order"].Month | Day: @Model["order"].Day | Year: @Model["order"].Year</p>
+<p>@Model["order"].Date</p>
 
 <form action='/vendors/@Model["vendor"].Id/orders/new' method="get">
   <button type="submit" class="btn btn-success" id="btn1">ADD ANOTHER ORDER TO CLIENT</button>

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 using Microsoft.AspNetCore.Mvc;
 using BakeryStatistics.Models;
 
@@ -38,11 +39,11 @@ namespace BakeryStatistics.Controllers
     }
 
     [HttpPost("/vendors/{vendorId}/orders")]
-    public ActionResult Create(int vendorId, string orderDetails, int price, int month, int day, int year)
+    public ActionResult Create(int vendorId, string orderDetails, int price, DateTime date)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
       Vendor foundVendor = Vendor.Find(vendorId);
-      Order newOrder = new Order(orderDetails, price, month, day, year);
+      Order newOrder = new Order(orderDetails, price, date);
       foundVendor.AddOrder(newOrder);
       List<Order> vendorOrders = foundVendor.Orders;
       model.Add("orders", vendorOrders);

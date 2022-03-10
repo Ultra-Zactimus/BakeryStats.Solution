@@ -7,19 +7,15 @@ namespace BakeryStatistics.Models
   {
     public string OrderDetails { get; set; }
     public int Price { get; set; }
-    public int Month { get; set; }
-    public int Day { get; set; }
-    public int Year { get; set; }
+    public DateTime Date { get; set; }
     public int Id { get; }
     private static List<Order> _instances = new List<Order>{};
 
-    public Order(string orderDetails, int price, int month, int day, int year)
+    public Order(string orderDetails, int price, DateTime date)
     {
       OrderDetails = orderDetails;
       Price = price;
-      Month = month;
-      Day = day;
-      Year = year;
+      Date = date;
       _instances.Add(this);
       Id = _instances.Count;
     }
