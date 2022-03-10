@@ -8,14 +8,14 @@
 
 <form action="/vendors" method="post">
   <label for="vendorName">Name: </label>
-  <input type="text" name="vendorName" id="vendorName">
-  <button type="submit" class="btn btn-success">ADD</button>
+  <input type="text" name="vendorName" id="vendorName" required>
+  <button type="submit" class="btn btn-success" id="btn1">ADD</button>
 </form>
 
 <form action="/" method="get">
-  <button type="submit" class="btn btn-success">HOME</button>
+  <button type="submit" class="btn btn-success" id="btn2">HOME</button>
 </form>
 
-<form action="/vendors" method="get">
-  <button type="submit" class="btn btn-success">List of Clients</button>
+<form action="/vendors" method="get" id="btn3">
+  <button type="submit" class="btn btn-success">LIST OF CLIENTS</button>
 </form>

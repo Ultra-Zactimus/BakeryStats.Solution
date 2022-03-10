@@ -11,25 +11,19 @@
 <p>@Model["order"].OrderDetails</p>
 
 <h4>Order Price:</h4>
-<p>@Model["order"].Price</p>
+<p>$@Model["order"].Price</p>
 
-<h4>Month of Purchase:</h4>
-<p>@Model["order"].Month</p>
-
-<h4>Day of Purchase:</h4>
-<p>@Model["order"].Day</p>
-
-<h4>Year of Purchase:</h4>
-<p>@Model["order"].Year</p>
+<h4>Date of Purchase:</h4>
+<p>Month: @Model["order"].Month | Day: @Model["order"].Day | Year: @Model["order"].Year</p>
 
 <form action='/vendors/@Model["vendor"].Id/orders/new' method="get">
-  <button type="submit" class="btn btn-success">Add Another Order</button>
+  <button type="submit" class="btn btn-success" id="btn1">ADD ANOTHER ORDER TO CLIENT</button>
 </form>
 
 <form action="/vendors" method="get">
-  <button type="submit" class="btn btn-success">List of Clients</button>
+  <button type="submit" class="btn btn-success" id="btn3">LIST OF CLIENTS</button>
 </form>
 
 <form action="/" method="get">
-  <button type="submit" class="btn btn-success">HOME</button>
+  <button type="submit" class="btn btn-success" id="btn4">HOME</button>
 </form>

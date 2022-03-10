@@ -1,0 +1,16 @@
+body
+{
+  text-align: center;
+  background-color: rgb(221, 216, 209);
+}
+
+#btn1, #btn2 ,#btn3, #btn4
+{
+  margin: 10px;
+}
+
+#home-btn
+{
+  margin: 50px;
+}
+

@@ -5,7 +5,12 @@
 @using BakeryStatistics.Models;
 
 <h3>Client Order Details:</h3>
+<br>
 
+@if (@Model["orders"].Count == 0)
+{
+  <p>There is no order details for this Client yet.</p>
+}
 <ol>
   @foreach (Order order in @Model["orders"])
   {
@@ -14,13 +19,13 @@
 </ol>
 
 <form action='/vendors/@Model["vendor"].Id/orders/new' method="get">
-  <button type="submit">ADD ORDER DETAILS</button>
+  <button type="submit" class="btn btn-success" id="btn1">ADD ORDER DETAILS</button>
 </form>
 
 <form action="/vendors" method="get">
-  <button type="submit">List of Clients</button>
+  <button type="submit" class="btn btn-success" id="btn2">LIST OF CLIENTS</button>
 </form>
 
 <form action="/" method="get">
-  <button type="submit">HOME</button>
+  <button type="submit" class="btn btn-success" id="btn3">HOME</button>
 </form>
